@@ -1,0 +1,19 @@
+JavaScript code that we write => NodeJS => V8 & libuv
+
+NodeJS 50% C++ 50% JS
+V8 70% C++ 30% JS 
+libuv 100% C++
+
+V8 is used to interpret and execute javascript code, while libuv is used for accessing the filesystem and some aspects of concurrency
+
+process - an instance of running a program
+thread - essentially a todo list that needs to be processed by the computers cpu
+os scheduler - decides which thread should be processed
+more cpu cores will allows for more processes to be completed
+
+node utilizes an event loop sequuence to dictate how fast the application runs each thread.
+
+Node Event Loop => Single threaded
+Some of Node Framework/Standard Library => Not single threaded
+
+libuv by default creates 4 additional threads inside of the thread pool. the thread pool will allow for computational code to run at the same time.
